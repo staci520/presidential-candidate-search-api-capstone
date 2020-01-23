@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*The box-sizing property is used to tell the browser what the sizing properties (width and
+    height) should include border-box.*/
+    box-sizing: border-box;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+  }
+  
+  body {
+    font-family: sans-serif;
+    font-size: 17px;
+
+}
+
+
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+}
+
+h3  {
+    font-size: 20px;
+    text-align: center;
+    
+}
+
+h5 {
+    margin: auto;
+}
+
+
+
+.nav-bar {
+    clear: both;
+    overflow: auto;
+}
+  
+  .title {
+    font: 75px; 
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .nav-links {
+    float: right;
+  }
+  
+  ul {
+    display: inline-block;
+    list-style-type: none;
+    text-decoration: none;
+  }
+  
+  li {
+    display: inline-block;
+    margin: 10px;
+    width: auto;
+  }
+  
+  a:link {
+    text-decoration: none;
+    color: black;
+    transition-duration: 0.6s;
+  }
+  
+  a:active {
+    color: blue;
+  }
+  
+  a:visited {
+    color: black;
+  }
+  
+  a:hover {
+    color: red;
+  }
+
+
+  /* HERO IMAGE & TAGLINE------------------------------------------- */
+
+  
+    
+
+
+/* CANDIDATE CONTAINER-----------------------------------------------*/
+
+
+
+/* .candidate-container  { */
+    .fixed-size-container {
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    background-color: lightgrey;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+ 
+}
+
+.fixed-sizeR {
+    text-align: center;
+    margin: 35px;
+    border: solid red 5px;
+    background-color: whitesmoke;
+  }
+
+  .fixed-sizeD {
+     text-align: center;
+    margin: 35px;
+    border: solid blue 5px;
+    background-color: whitesmoke;
+  }
+
+  .radio-button  {
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+
+  }
+
+
+
+/* RESULTS---------------------------------------------------*/
+
+/* .results {
+    margin: 30px; 
+} */
+
+.results-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+
+}
+
+.first {
+    background-color: #95A5A6;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.first-a {
+    background-color: #BFBFBF;
+    flex: 1;
+    padding: 20px;
+}
+
+.first-b {
+    background-color: #BDC3C7;  
+    flex: 1;
+    padding: 20px;
+}
+
+.second {
+    background-color: #D2D7D3;
+    padding: 20px;
+    flex: 1;
+}
+
+#results-News-list img {
+    width: 100%;
+}
+
+
+/* CONNECT-------------------------------------------------------- */
+
+.connect-container {
+   margin: auto;
+   text-align: center;
+   margin: 20px;
+
+}
+
+
+/* FOOTER----------------------------------------------------------*/
+
+.footer-container {
+    margin: auto;
+    text-align: center;
+    margin: 20px;
+  }
+
+/* MEDIA QUERIES---------------------------------------------------*/
