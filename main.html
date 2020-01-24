@@ -14,21 +14,23 @@
 
 <body>
     <header class="nav-bar">
-        <div class="title"></div>
+        <div class="title">
         <h1>2020 U.S PRESIDENTIAL ELECTION ... in so many words</h1>
         </div>
 
-        <ul class="nav-links">
+        <!-- <ul class="nav-links">
             <li>
                 <a href="Home">Home
                 </a>
-            </li>
-            <!-- <li>
+            </li> 
+            <li>
                 <a href="Archive">Archive
                 </a>
-            </li> -->
-        </ul>
+            </li> 
+        </ul> -->
     </header>
+
+    <main>
 
     <section class="Hero">
         <div class="hero-container">
@@ -37,10 +39,10 @@
         </div>
     </section>
 
-    <!-- CANDIDATES SECTION -->
-    <section class="Candidates">
-        <div class="fixed-size-container">
-        <!-- <form class="candidate-container"> -->
+<!-- CANDIDATES SECTION -->
+
+    <section class="candidates-container">
+        <!-- <div class="fixed-size-container"> -->
 
             <div class="fixed-sizeR">
                 <img class="Image" src="images/DonaldTrump.jpg" alt="Donald Trump" id="DTrump">
@@ -48,7 +50,7 @@
             </div>
 
             <div class="fixed-sizeR">
-                <img class="Image" src="images/JoeWalsh.jpg" alt="Joe Walsh" id="jWalsh">
+                <img class="Image" src="images/JoeWalsh.jpg" alt="Joe Walsh President" id="jWalsh">
                 <h5>Joe <br> Walsh</h5>
             </div>
 
@@ -108,7 +110,7 @@
             </div>
 
             <div class="fixed-sizeD">
-                <img class="Image" src="images/ElizabethWarren.jpg" alt="Eizabeth Warren" id="eWarren">
+                <img class="Image" src="images/ElizabethWarren.jpg" alt="Elizabeth Warren" id="eWarren">
                 <h5>Elizabeth <br> Warren</h5>
             </div>
 
@@ -117,43 +119,44 @@
                 <h5>Andrew <br> Yang</h5>
             </div>
         </div>
-        <!-- </form> -->
     </section>
 
-    <section class="results">
-        <div class="results-container">
+        <section class="results-container">
             <div class="first">
                 <div class="first-a">
-                    <h3>Candidate</h3>
-                    <p> Et ultrices neque ornare aenean euismod elementum nisi. Blandit massa enim nec dui nunc mattis
-                        enim ut tellus. Nec ultrices dui sapien eget mi proin sed libero. Nullam non nisi est sit. Nisl
-                        pretium fusce id velit ut. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere
-                        lorem. Dignissim enim sit amet venenatis urna cursus eget. Malesuada bibendum arcu vitae
-                        elementum curabitur vitae nunc sed. Adipiscing enim eu turpis egestas pretium aenean pharetra
-                        magna ac. Semper auctor neque vitae tempus quam pellentesque nec nam.</p>
+                    <h3>CANDIDATE (under construction)</h3>
+                        <p>Primum in nostrane potestate est, quid meminerimus? Nihil opus est exemplis hoc facere longius. Utrum enim sit voluptas in iis rebus, quas primas secundum naturam esse diximus, necne sit ad id, quod agimus, nihil interest. Intellegi quidem, ut propter aliam quampiam rem, verbi gratia propter voluptatem, nos amemus; At iam decimum annum in spelunca iacet. Neque enim civitas in seditione beata esse potest nec in discordia dominorum domus; Numquam hoc ita defendit Epicurus neque Metrodorus aut quisquam eorum, qui aut saperet aliquid aut ista didicisset. Etsi ea quidem, quae adhuc dixisti, quamvis ad aetatem recte isto modo dicerentur.
+                        </p>
+                    <p id="js-votesmart-error-message" class="error-message"></p>
+                    <section id="resultsVoteSmart" class="hidden">
+                        <ul id="results-VoteSmart-list">
+                        </ul>
+                    </section>
                 </div>
 
                 <div class="first-b">
-                    <h3>YouTube</h3>
-                    <p id="js-error-message" class="error-message"></p>
+                    <h3>YOUTUBE</h3>
+                    <p id="js-youtube-error-message" class="error-message"></p>
                     <section id="resultsYouTube" class="hidden">
                         <ul id="results-YouTube-list">
                         </ul>
                     </section>
                 </div>
-
+            </div>
+  
                 <div class="second">
-                    <h3>News</h3>
-                    <p id="js-error-message" class="error-message"></p>
+                    <h3>NEWS</h3>
+                    <p id="js-news-error-message" class="error-message"></p>
                     <section id="resultsNews" class="hidden">
                         <ul id="results-News-list">
                         </ul>
                     </section>
                 </div>
-            </div>
-    </section>
+           
+        </section>
 
-    <!-- Connect Content -->
+   <!-- CONNECT SECTION -->
+
     <section class="connect-container">
         <h3>Connect with me </h3>
         <ul class="icons">
@@ -176,16 +179,17 @@
             </li>
         </ul>
     </section>
+</main>
 
+<!-- FOOTER SECTION -->
 
     <footer class="footer-container">
         <h6>&copy; 2020 Staci Stark</h6>
     </footer>
 
-
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="store.js"></script>
     <script src="index.js"></script>
     <script src="https://kit.fontawesome.com/343fa11119.js" crossorigin="anonymous"></script>
 </body>
