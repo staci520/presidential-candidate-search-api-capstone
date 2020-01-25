@@ -37,27 +37,25 @@ function getVoteSmart(query) {
 
 function displayVoteSmart(responseJson) {
   // if there are previous results, remove them
-  console.log("==>",responseJson);
+  console.log("VS ====>", responseJson);
   $('#results-VoteSmart-list').empty();
   // iterate through the articles array, stopping at the max number of results
   // for (let i = 0; i < responseJson.articles.length ; i++) {
 
-      for (let x in responseJson) {
-        console.log(`VoteSmart Bio: ${responseJson[x].generalInfo.linkBack}`)
-      
-    
-    
-    // $('#results-VoteSmart-list').append(
-    //   `<li><h3><a href="${responseJson.articles[i].url}">${responseJson.[i].title}</a></h3>
-    //   <p>${responseJson.articles[i].source.name}</p>
-    //    <p>By ${responseJson.articles[i].author}</p>
-    //   <p>${responseJson.articles[i].description}</p>
-    //    <img src='${responseJson.articles[i].urlToImage}'>
-    //    </li>`
-    // )
-   };
+  for (let obj in responseJson) {
+    console.log(`VoteSmart Bio: ${responseJson[obj].generalInfo.linkBack}`)
+    $("#candidateName").replaceWith(`<h4 id="candidateName">Links for ${responseJson[obj].candidate.firstName} ${responseJson[obj].candidate.lastName}</h4>`)
+    $('#results-VoteSmart-list').append(
+      `<li><a href="${responseJson[obj].generalInfo.linkBack}" target="_blank"> VoteSmart Data </a></li><br>`)
+
+      for (let i = 0; i < responseJson[obj].address.length; i++) {
+        //console.log("VS Candidate Link ===>",responseJson[obj].address[i].webAddress)
+        $('#results-VoteSmart-list').append(`<li><a href="${responseJson[obj].address[i].webAddress}" target="_blank"> ${responseJson[obj].address[i].webAddressType} </a></li><br>`)
+      }
+  };
+  
   // display the results section  
-    //  $('#results').removeClass('hidden');
+  $('#results').removeClass('hidden');
 };
 
 
@@ -158,6 +156,7 @@ function displayYouTubeVideos(responseJson) {
     $('#results-YouTube-list').append(
       `<li><h4><a href="${youTubeUrl}" target="_blank" ${responseJson.items[i].snippet.title}</a></h4>
        <p>${responseJson.items[i].snippet.description}</p>
+       <p>${responseJson.items[i].snippet.publishedAt}</p>
       <img src='${responseJson.items[i].snippet.thumbnails.default.url}'>
       </li>`
     )
@@ -179,7 +178,7 @@ function watchCandidate() {
     getYouTubeVideos(candidateName);
     // alert("Candidate Clicked!")
     getNews(candidateName)
-    
+
   });
 }
 
