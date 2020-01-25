@@ -46,14 +46,46 @@ function displayVoteSmart(responseJson) {
     console.log(`VoteSmart Bio: ${responseJson[obj].generalInfo.linkBack}`)
     $("#candidateName").replaceWith(`<h4 id="candidateName">Links for ${responseJson[obj].candidate.firstName} ${responseJson[obj].candidate.lastName}</h4>`)
     $('#results-VoteSmart-list').append(
-      `<li><a href="${responseJson[obj].generalInfo.linkBack}" target="_blank"> VoteSmart Data </a></li><br>`)
+      `<li><a href="${responseJson[obj].generalInfo.linkBack}" target="_blank"> <i class="fas fa-vote-yea fa-4x"></i></a></li><br>`)
 
-      for (let i = 0; i < responseJson[obj].address.length; i++) {
-        //console.log("VS Candidate Link ===>",responseJson[obj].address[i].webAddress)
-        $('#results-VoteSmart-list').append(`<li><a href="${responseJson[obj].address[i].webAddress}" target="_blank"> ${responseJson[obj].address[i].webAddressType} </a></li><br>`)
+    for (let i = 0; i < responseJson[obj].address.length; i++) {
+      //console.log("VS Candidate Link ===>",responseJson[obj].address[i].webAddress)
+      const webAddressType = responseJson[obj].address[i].webAddressType;
+      const webAddress = responseJson[obj].address[i].webAddress;
+      if (webAddressType === "Email") {
+        $('#results-VoteSmart-list').append(`<li><a href="mailto:${webAddress}" target="_blank"> 
+          <i class="fas fa-envelope-square fa-4x"></i></a></li>`)
+      } else if (webAddressType === "Webmail") {
+        $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
+          <i class="fas fa-envelope-square fa-4x"></i></a></li>`)
+      } else if (webAddressType === "Website - Twitter") {
+        $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
+          <i class="fab fa-twitter-square fa-4x"></i></a></li>`)
+      } else if (webAddressType === "Website - Facebook") {
+        $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
+          <i class="fab fa-facebook-square fa-4x"></i></a></li>`)
+      } else if (webAddressType === "Website - Instagram") {
+        $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
+          <i class="fab fa-instagram fa-4x"></i></a></li>`)
+      } else if (webAddressType === "Website - YouTube") {
+        $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
+          <i class="fab fa-youtube-square fa-4x"></i></a></li>`)
+      } else if (webAddressType === "Website - LinkedIn") {
+        $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
+          <i class="fab fa-linkedin fa-4x"></i></a></li>`)
+      } else if (webAddress === "https://www.flickr.com/photos/146043801@N08/with/31817149657/") {
+        $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
+            <i class="fab fa-flickr fa-4x"></i></a></li>`)
+      } else if (webAddress === "https://medium.com/@Tom_Steyer" || webAddress === "https://medium.com/@TulsiGabbard") {
+        $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
+          <i class="fab fa-medium fa-4x"></i></a></li>`)
+      } else {
+        $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
+          <i class="fas fa-home fa-4x"></i>  </a></li>`)
       }
+    }
   };
-  
+
   // display the results section  
   $('#results').removeClass('hidden');
 };

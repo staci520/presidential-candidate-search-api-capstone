@@ -10,7 +10,7 @@ const STORE = [
     },
     {
         candidateName: 'Bill Weld',
-        candidateId: '15723',
+        candidateId: '21733',
     },
     {
         candidateName: 'Michael Bennet',
