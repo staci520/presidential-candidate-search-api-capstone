@@ -73,6 +73,9 @@ function displayVoteSmart(responseJson) {
       } else if (webAddressType === "Website - LinkedIn") {
         $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
           <i class="fab fa-linkedin fa-4x"></i></a></li>`)
+      } else if (webAddress === "https://www.snapchat.com/add/bernie.sanders") {
+        $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
+              <i class="fab fa-snapchat-square fa-4x"></i></a></li>`)
       } else if (webAddress === "https://www.flickr.com/photos/146043801@N08/with/31817149657/") {
         $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
             <i class="fab fa-flickr fa-4x"></i></a></li>`)
@@ -85,9 +88,6 @@ function displayVoteSmart(responseJson) {
       }
     }
   };
-
-  // display the results section  
-  $('#results').removeClass('hidden');
 };
 
 
@@ -130,21 +130,16 @@ function displayNews(responseJson, maxResults) {
   $('#results-News-list').empty();
   // iterate through the articles array, stopping at the max number of results
   for (let i = 0; i < responseJson.articles.length & i < maxResults; i++) {
-    // for each video object in the articles
-    //array, add a list item to the results 
-    //list with the article title, source, author,
-    //description, and image
     $('#results-News-list').append(
-      `<li><h4><a href="${responseJson.articles[i].url}" target="_blank" >${responseJson.articles[i].title}</a></h4>
-      <p>${responseJson.articles[i].source.name}</p>
-      <p>By ${responseJson.articles[i].author}</p>
-      <p>${responseJson.articles[i].description}</p>
-      <img src='${responseJson.articles[i].urlToImage}'>
+      `<li><h4><a href="${responseJson.articles[i].url}" target="_blank" >${responseJson.articles[i].title}</a></h4><br>
+      <p>${responseJson.articles[i].source.name} By ${responseJson.articles[i].author}</p><br>
+      <p><img src='${responseJson.articles[i].urlToImage}'>
+      ${responseJson.articles[i].description}</p>
+      
       </li>`
     )
   };
-  //display the results section  
-  //   $('#results').removeClass('hidden');
+
 };
 
 // YOUTUBE
@@ -156,7 +151,7 @@ function getYouTubeVideos(candidateName) {
     key: apiKeyYouTube,
     q: candidateName,
     part: 'snippet',
-    maxResults: '5',
+    maxResults: '2',
     type: 'video'
   };
   const queryString = formatQueryParams(params)
@@ -186,16 +181,17 @@ function displayYouTubeVideos(responseJson) {
     const youTubeUrl = 'https://www.youtube.com/watch?v=' + responseJson.items[i].id.videoId;
     console.log(youTubeUrl);
     $('#results-YouTube-list').append(
-      `<li><h4><a href="${youTubeUrl}" target="_blank" ${responseJson.items[i].snippet.title}</a></h4>
-       <p>${responseJson.items[i].snippet.description}</p>
-       <p>${responseJson.items[i].snippet.publishedAt}</p>
+      `<li><h4><a href="${youTubeUrl}" target="_blank" ${responseJson.items[i].snippet.title}</a></h4><br>
+       <p>${responseJson.items[i].snippet.description}</p><br>
+       <p>${responseJson.items[i].snippet.publishedAt}</p><br>
       <img src='${responseJson.items[i].snippet.thumbnails.default.url}'>
+      <hr>
       </li>`
     )
   };
-  //display the results section  
-  $('#results').removeClass('hidden');
 };
+
+
 
 function watchCandidate() {
   $('.Image').click(function (event) {
@@ -206,12 +202,13 @@ function watchCandidate() {
     let obj = STORE.find(data => data.candidateName === candidateName);
     console.log(obj);
     // getNews();
+    $('.results-container').get(0).scrollIntoView()
     getVoteSmart(obj.candidateId)
     getYouTubeVideos(candidateName);
     // alert("Candidate Clicked!")
     getNews(candidateName)
-
   });
 }
 
 $(watchCandidate);
+
