@@ -1,12 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Page Under Construction</title>
+    <meta name="description" content="Explore and examine the words shared about the 2020 U.S. Presidential Election">
+    <meta name="keywords"
+        content="2020 Election, Presidential, candidates, VoteSmart, Facebook, Twitter, News, YouTube, ">
+    <link rel="stylesheet" href="main.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather%7CRosarivo&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Rosarivo&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <title>2020 U.S. Presidential Election In So Many Words Landing Page</title>
 </head>
+
+ 
+<!-- HEADER SECTION -->
+
 <body>
-    
+
+    <header class="nav-bar">
+        <div class="title">
+            <h1>2020 U.S PRESIDENTIAL ELECTION ... <i>in so many words</i></h1>
+            <h2 class="tagline">Connect, watch and read about the leading candidates with a few clicks</h2>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="main.html">Home</a>
+            </li>
+            <li>
+                <a href="archive.html">Archive</a>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+        <!-- CANDIDATES SECTION -->
+
+        <section class="candidates-container">
+            <!-- <div class="fixed-size-container"> -->
+
+            <div class="fixed-sizeD">
+                <img class="Image" src="images/CoryBooker.jpg" alt="Cory Booker" id="cBooker">
+                <h5>Cory<br>Booker</h5>
+            </div>
+
+            <div class="fixed-sizeD">
+                <img class="Image" src="images/SteveBullock.jpg" alt="Steve Bullock President" id="sBullock">
+                <h5>Steve<br>Bullock</h5>
+            </div>
+
+            <div class="fixed-sizeD">
+                <img class="Image" src="images/JulianCastro.jpg" alt="Julian Castro" id="jCastro">
+                <h5>Julian<br>Castro</h5>
+            </div>
+
+            <div class="fixed-sizeD">
+                <img class="Image" src="images/BilldeBlasio.jpg" alt="Bill deBlasio" id="bDeblasio">
+                <h5>Bill<br>deBlasio</h5>
+            </div>
+
+            <div class="fixed-sizeD">
+                <img class="Image" src="images/KirstenGillibrand.jpg" alt="Kirsten Gillibrand" id="kGillibrand">
+                <h5>Kirsten<br>Gillibrand</h5>
+            </div>
+
+            <div class="fixed-sizeD">
+                <img class="Image" src="images/MikeGravel.jpg" alt="Mike Gravel" id="mGravel">
+                <h5>Mike<br>Gravel</h5>
+            </div>
+
+            <div class="fixed-sizeD">
+                <img class="Image" src="images/KamalaHarris.jpg" alt="Kamala Harris" id="kHarris">
+                <h5>Kamala<br>Harris</h5>
+            </div>
+
+            <div class="fixed-sizeD">
+                <img class="Image" src="images/JohnHickenlooper.jpg" alt="John Hickenlooper" id="jHickenlooper">
+                <h5>John<br>Hickenlooper</h5>
+            </div>
+
+            <div class="fixed-sizeD">
+                <img class="Image" src="images/JayInslee.jpg" alt="Jay Inslee" id="jInslee">
+                <h5>Jay<br>Inslee</h5>
+            </div>
+
+            <div class="fixed-sizeD">
+                <img class="Image" src="images/WayneMessam.jpg" alt="Wayne Messam" id="wMessam">
+                <h5>Wayne<br>Messam</h5>
+            </div>
+
+            <div class="fixed-sizeD">
+                <img class="Image" src="images/SethMoulton.jpg" alt="Seth Moulton" id="sMoulton">
+                <h5>Seth<br>Moulton</h5>
+            </div>
+
+            <div class="fixed-sizeD">
+                <img class="Image" src="images/RichardOjeda.jpg" alt="Richard Ojeda" id="rOjeda">
+                <h5>Richard<br>Ojeda</h5>
+            </div>
+
+            <div class="fixed-sizeD">
+                <img class="Image" src="images/BetoORourke.jpg" alt="Beto O'Rourke" id="bORourke">
+                <h5>Beto<br>O'Rourke</h5>
+            </div>
+
+            <div class="fixed-sizeD">
+                <img class="Image" src="images/TimRyan.jpg" alt="Tim Ryan" id="tRyan">
+                <h5>Tim<br>Ryan</h5>
+            </div>
+
+            <div class="fixed-sizeD">
+                <img class="Image" src="images/JoeSestak.jpg" alt="Joe Sestak" id="jSestak">
+                <h5>Joe<br>Sestak</h5>
+            </div>
+
+            <div class="fixed-sizeD">
+                <img class="Image" src="images/EricSwalwell.jpg" alt="Eric Swalwell" id="eSwalwell">
+                <h5>Eric<br>Swalwell</h5>
+            </div>
+
+            <div class="fixed-sizeD">
+                <img class="Image" src="images/MarianneWilliamson.jpg" alt="Marianne Williamson" id="mWilliamson">
+                <h5>Marianne<br>Williamson</h5>
+            </div>
+        </section>
+
+        <section class="results-container">
+            <div class="first">
+                <div class="first-a">
+                    <h3><i class="fas fa-plug"></i> CONNECT</h3>
+                    <h4 id="candidateName"></h4>
+                    <p id="js-votesmart-error-message" class="error-message"></p>
+                    <section id="resultsVoteSmart" class="hidden">
+                        <ul id="results-VoteSmart-list">
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="first-b">
+                    <h3><i class="fab fa-youtube-square"></i> WATCH</h3>
+                    <p id="js-youtube-error-message" class="error-message"></p>
+                    <section id="resultsYouTube" class="hidden">
+                        <ul id="results-YouTube-list">
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div class="second">
+                <h3><i class="far fa-newspaper"></i> READ</h3>
+                <p id="js-news-error-message" class="error-message"></p>
+                <section id="resultsNews" class="hidden">
+                    <ul id="results-News-list">
+                    </ul>
+                </section>
+            </div>
+
+        </section>
+
+        <!-- CONNECT SECTION -->
+
+        <section class="connect-container">
+            <h2>Connect with me </h2>
+            <ul class="connect-icons">
+                <li>
+                    <a href="mailto:staci520@yahoo.com" target="_blank">
+                        <i class="fas fa-envelope-square fa-2x" style="color:whitesmoke"></i>
+                    </a>
+                <li>
+                    <a href="https://www.linkedin.com/in/staci-stark-b47b52162/#" target="_blank">
+                        <i class="fab fa-linkedin fa-2x" style="color:whitesmoke"></i>
+                    </a>
+                <li>
+                    <a href="https://github.com/staci520" target="_blank">
+                        <i class="fab fa-github-square fa-2x" style="color:whitesmoke"></i>
+                    </a>
+                <li>
+                    <a href="https://www.instagram.com/razor_stark_solutions/" target="_blank">
+                        <i class="fab fa-instagram fa-2x" style="color:whitesmoke"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+
+    <footer class="footer-container">
+        <h6>&copy; 2020 Staci Stark</h6>
+        <h6>Content powered by VoteSmart, YouTube and NewsAPI.org </h6>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="store.js"></script>
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/343fa11119.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

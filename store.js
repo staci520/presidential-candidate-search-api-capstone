@@ -60,6 +60,76 @@ const STORE = [
         candidateName: 'Andrew Yang',
         candidateId: '186040',
     },
+
+    {
+        candidateName: 'Cory Booker',
+        candidateId: '76151',
+    },
+    {
+        candidateName: 'Mariane Williamson',
+        candidateId: '146092',
+    },
+    {
+        candidateName: 'Julian Castro',
+        candidateId: '115371',
+    },
+    {
+        candidateName: 'Kamala Harris',
+        candidateId: '120012',
+    },
+    {
+        candidateName: 'Steve Bullock',
+        candidateId: '110899',
+    },
+    {
+        candidateName: 'Joe Sestak',
+        candidateId: '583333',
+    },
+    {
+        candidateName: 'Wayne Messam',
+        candidateId: '130228',
+    },
+    {
+        candidateName: "Beto O'Rourke",
+        candidateId: '78533',
+    },
+    {
+        candidateName: 'Tim Ryan',
+        candidateId: '45638',
+    },
+    {
+        candidateName: 'Bill deBlasio',
+        candidateId: '80257',
+    },
+    {
+        candidateName: 'Kirsten Gillibrand',
+        candidateId: '65147',
+    },
+    {
+        candidateName: 'Seth Moulton',
+        candidateId: '146299',
+    }, {
+        candidateName: 'Jay Inslee',
+        candidateId: '27125',
+    }, {
+        candidateName: 'John Hickenlooper',
+        candidateId: '71547',
+    }, {
+        candidateName: 'Mike Gravel',
+        candidateId: '69496',
+    },
+    {
+        candidateName: 'Erick Swalwell',
+        candidateId: '129529',
+    },
+    {
+        candidateName: 'Richard Ojeda',
+        candidateId: '147777',
+    },
+    {
+        candidateName: 'Dennis Lambert',
+        candidateId: '120607',
+    },
 ]
 
 

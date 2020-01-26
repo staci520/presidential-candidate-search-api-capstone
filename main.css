@@ -26,9 +26,7 @@ body {
 
 
 h1 {
-  /* font-family: 'PT Serif', serif; */
   font-family: 'Merriweather', serif;
-  /* font-family: 'Rosarivo', serif; */
   font-size: 40px;
   margin: 25px;
   text-align: center;
@@ -45,7 +43,6 @@ h2 {
 }
 
 h3 {
-  /* font-family: 'PT Serif', serif; */
   font-family: 'Merriweather', serif;
   font-size: 26px;
   text-align: center;
@@ -54,7 +51,6 @@ h3 {
   padding: 5px;
   background-color: #BDC3C7;
 }
-
 
 h4 {
   font-size: 18px;
@@ -66,10 +62,30 @@ h5 {
   margin: auto;
 }
 
-/* .nav-bar {
-    clear: both;
-    overflow: auto;
-} */
+/* HEADER / NAV BAR */
+
+.nav-bar {
+    text-align: center;
+}
+
+.nav-bar .nav-links a:link {
+  color: whitesmoke;
+  font-weight: bold;
+  transition-duration: 0.3s;
+}
+
+.nav-bar .nav-links a:visited {
+  color: whitesmoke;
+}
+
+.nav-bar .nav-links a:hover {
+  color: #943939;
+}
+
+.nav-bar .nav-links a:active {
+  color: #393C62;
+}
+
 
 .title {
   font: 75px;
@@ -81,15 +97,14 @@ h5 {
   margin-bottom: 10px;
 }
 
-/* .nav-links {
-    float: right;
-  }
   
-  ul {
+ul {
     display: inline-block;
     list-style-type: none;
     text-decoration: none;
-  } */
+  }
+
+
 
 li {
   display: inline-block;
@@ -121,32 +136,13 @@ a:active {
   color: #393C62;
 }
 
-/* HASH STYLES */
-
-body,
-html,
-.main {
-  height: 100%;
-}
-
-section {
-  min-height: 100%;
-}
-
-
-/* HERO IMAGE & TAGLINE------------------------------------------- */
-
-
-
-
 
 /* CANDIDATE CONTAINER-----------------------------------------------*/
 
 .candidates-container {
   max-width: 1000px;
-  margin: 40px auto 0 auto;
+  margin: 0 auto;
   background-color: #BDC3C7;
-  padding: 30px 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -168,6 +164,13 @@ section {
   text-align: center;
   margin: 35px;
   border: solid darkblue 6px;
+  background-color: whitesmoke;
+}
+
+.fixed-sizeG {
+  text-align: center;
+  margin: 35px;
+  border: solid darkgreen 6px;
   background-color: whitesmoke;
 }
 

@@ -23,13 +23,14 @@ body {
 }
 
 h1 {
-    /* font-family: 'PT Serif', serif; */
     font-family: 'Merriweather', serif;
-    /* font-family: 'Rosarivo', serif; */
     font-size: 40px;
     margin: 30px;
 
+}
 
+header {
+    text-align: center;
 }
 
 .hero-container {

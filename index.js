@@ -12,6 +12,7 @@ function formatQueryParams(params) {
 function getVoteSmart(query) {
   const apiKey = "6180b80d1ce369c999188893e5e264ec"
   const searchURL = 'https://api.votesmart.org/Address.getCampaignWebAddress';
+  // const searchURL2 = 'http://api.votesmart.org/CandidateBio.getBio';
   const params = {
     key: apiKey,
     candidateId: query,
@@ -38,9 +39,12 @@ function getVoteSmart(query) {
 function displayVoteSmart(responseJson) {
   // if there are previous results, remove them
   console.log("VS ====>", responseJson);
+  console.log(typeof responseJson.error);
   $('#results-VoteSmart-list').empty();
+  $('#candidateName').empty();
   // iterate through the articles array, stopping at the max number of results
   // for (let i = 0; i < responseJson.articles.length ; i++) {
+
 
   for (let obj in responseJson) {
     console.log(`VoteSmart Bio: ${responseJson[obj].generalInfo.linkBack}`)
@@ -79,7 +83,7 @@ function displayVoteSmart(responseJson) {
       } else if (webAddress === "https://www.flickr.com/photos/146043801@N08/with/31817149657/") {
         $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
             <i class="fab fa-flickr fa-4x"></i></a></li>`)
-      } else if (webAddress === "https://medium.com/@Tom_Steyer" || webAddress === "https://medium.com/@TulsiGabbard") {
+      } else if (webAddress === "https://medium.com/@Tom_Steyer" || webAddress === "https://medium.com/@TulsiGabbard" || webAddress === "https://medium.com/@KamalaHarris")  {
         $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
           <i class="fab fa-medium fa-4x"></i></a></li>`)
       } else {
@@ -88,8 +92,8 @@ function displayVoteSmart(responseJson) {
       }
     }
   };
-};
-
+  ;
+}
 
 // NEWS API
 
