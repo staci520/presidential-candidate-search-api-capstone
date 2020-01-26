@@ -139,6 +139,9 @@ a:active {
 
 /* CANDIDATE CONTAINER-----------------------------------------------*/
 
+
+
+
 .candidates-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -167,13 +170,19 @@ a:active {
   background-color: whitesmoke;
 }
 
-.fixed-sizeG {
+.fixed-sizeL {
   text-align: center;
   margin: 35px;
   border: solid darkgreen 6px;
   background-color: whitesmoke;
 }
 
+.fixed-sizeG {
+  text-align: center;
+  margin: 35px;
+  border: solid goldenrod 6px;
+  background-color: whitesmoke;
+}
 
 /* RESULTS---------------------------------------------------*/
 

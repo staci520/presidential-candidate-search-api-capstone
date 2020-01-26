@@ -48,9 +48,9 @@ function displayVoteSmart(responseJson) {
 
   for (let obj in responseJson) {
     console.log(`VoteSmart Bio: ${responseJson[obj].generalInfo.linkBack}`)
-    $("#candidateName").replaceWith(`<h4 id="candidateName">Links for ${responseJson[obj].candidate.firstName} ${responseJson[obj].candidate.lastName}</h4>`)
+    $("#candidateName").replaceWith(`<b><h5 id="candidateName">${responseJson[obj].candidate.firstName} ${responseJson[obj].candidate.lastName}</h5></b>`)
     $('#results-VoteSmart-list').append(
-      `<li><a href="${responseJson[obj].generalInfo.linkBack}" target="_blank"> <i class="fas fa-vote-yea fa-4x"></i></a></li><br>`)
+      `<li><a href="${responseJson[obj].generalInfo.linkBack}" target="_blank"> <i class="fas fa-binoculars fa-4x"></i></a></li><br>`)
 
     for (let i = 0; i < responseJson[obj].address.length; i++) {
       //console.log("VS Candidate Link ===>",responseJson[obj].address[i].webAddress)
@@ -88,7 +88,7 @@ function displayVoteSmart(responseJson) {
           <i class="fab fa-medium fa-4x"></i></a></li>`)
       } else {
         $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
-          <i class="fas fa-home fa-4x"></i>  </a></li>`)
+          <i class="fas fa-bullhorn fa-4x"></i>  </a></li>`)
       }
     }
   };

@@ -66,7 +66,7 @@ const STORE = [
         candidateId: '76151',
     },
     {
-        candidateName: 'Mariane Williamson',
+        candidateName: 'Marianne Williamson',
         candidateId: '146092',
     },
     {
@@ -130,6 +130,25 @@ const STORE = [
         candidateName: 'Dennis Lambert',
         candidateId: '120607',
     },
+    {
+        candidateName: 'Howie Hawkins',
+        candidateId: '1019',
+    },
+    {
+        candidateName: 'Dario Hunter',
+        candidateId: '53241',
+    },
+    {
+        candidateName: 'Vermin Supreme',
+        candidateId: '53133',
+    },
+    {
+        candidateName: 'Dan Behrman',
+        candidateId: '186431',
+    },
+
+
+
 ]
 
 
