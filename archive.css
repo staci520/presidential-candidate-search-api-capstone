@@ -156,14 +156,14 @@
   .fixed-sizeR {
     text-align: center;
     margin: 35px;
-    border: solid darkred 6px;
+    border: solid darkred 7px;
     background-color: whitesmoke;
   }
   
   .fixed-sizeD {
     text-align: center;
     margin: 35px;
-    border: solid darkblue 6px;
+    border: solid darkblue 7px;
     background-color: whitesmoke;
   }
   

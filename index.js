@@ -1,5 +1,15 @@
 'use strict';
 
+function convertUTCDateToLocalDate(date) {
+  var newDate = new Date(date.getTime() + date.getTimezoneOffset() * 60 * 1000);
+
+  var offset = date.getTimezoneOffset() / 60;
+  var hours = date.getHours();
+
+  newDate.setHours(hours - offset);
+
+  return newDate;
+}
 
 function formatQueryParams(params) {
   const queryItems = Object.keys(params)
@@ -36,21 +46,20 @@ function getVoteSmart(query) {
     });
 }
 
+//Display VoteSmart
+
 function displayVoteSmart(responseJson) {
   // if there are previous results, remove them
   console.log("VS ====>", responseJson);
   console.log(typeof responseJson.error);
   $('#results-VoteSmart-list').empty();
   $('#candidateName').empty();
-  // iterate through the articles array, stopping at the max number of results
-  // for (let i = 0; i < responseJson.articles.length ; i++) {
-
 
   for (let obj in responseJson) {
     console.log(`VoteSmart Bio: ${responseJson[obj].generalInfo.linkBack}`)
     $("#candidateName").replaceWith(`<b><h5 id="candidateName">${responseJson[obj].candidate.firstName} ${responseJson[obj].candidate.lastName}</h5></b>`)
     $('#results-VoteSmart-list').append(
-      `<li><a href="${responseJson[obj].generalInfo.linkBack}" target="_blank"> <i class="fas fa-binoculars fa-4x"></i></a></li><br>`)
+      `<li><a href="${responseJson[obj].generalInfo.linkBack}" target="_blank"> <i class="fas fa-binoculars fa-4x"></i><span>VoteSmart</span></a></li>`)
 
     for (let i = 0; i < responseJson[obj].address.length; i++) {
       //console.log("VS Candidate Link ===>",responseJson[obj].address[i].webAddress)
@@ -58,37 +67,37 @@ function displayVoteSmart(responseJson) {
       const webAddress = responseJson[obj].address[i].webAddress;
       if (webAddressType === "Email") {
         $('#results-VoteSmart-list').append(`<li><a href="mailto:${webAddress}" target="_blank"> 
-          <i class="fas fa-envelope-square fa-4x"></i></a></li>`)
+          <i class="fas fa-envelope-square fa-4x"></i><span>Mail</span></a></li>`)
       } else if (webAddressType === "Webmail") {
         $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
-          <i class="fas fa-envelope-square fa-4x"></i></a></li>`)
+          <i class="fas fa-envelope-square fa-4x"></i><span>Mail</span></a></li>`)
       } else if (webAddressType === "Website - Twitter") {
         $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
-          <i class="fab fa-twitter-square fa-4x"></i></a></li>`)
+          <i class="fab fa-twitter-square fa-4x"></i><span>Twitter</span></a></li>`)
       } else if (webAddressType === "Website - Facebook") {
         $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
-          <i class="fab fa-facebook-square fa-4x"></i></a></li>`)
+          <i class="fab fa-facebook-square fa-4x"></i><span>Facebook</span></a></li>`)
       } else if (webAddressType === "Website - Instagram") {
         $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
-          <i class="fab fa-instagram fa-4x"></i></a></li>`)
+          <i class="fab fa-instagram fa-4x"></i><span>Instagram</span></a></li>`)
       } else if (webAddressType === "Website - YouTube") {
         $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
-          <i class="fab fa-youtube-square fa-4x"></i></a></li>`)
+          <i class="fab fa-youtube-square fa-4x"></i><span>YouTube</span></a></li>`)
       } else if (webAddressType === "Website - LinkedIn") {
         $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
-          <i class="fab fa-linkedin fa-4x"></i></a></li>`)
+          <i class="fab fa-linkedin fa-4x"></i></a><span>LinkedIn</span></li>`)
       } else if (webAddress === "https://www.snapchat.com/add/bernie.sanders") {
         $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
-              <i class="fab fa-snapchat-square fa-4x"></i></a></li>`)
+              <i class="fab fa-snapchat-square fa-4x"></i><span>SnapChat</span></a></li>`)
       } else if (webAddress === "https://www.flickr.com/photos/146043801@N08/with/31817149657/") {
         $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
-            <i class="fab fa-flickr fa-4x"></i></a></li>`)
-      } else if (webAddress === "https://medium.com/@Tom_Steyer" || webAddress === "https://medium.com/@TulsiGabbard" || webAddress === "https://medium.com/@KamalaHarris")  {
+            <i class="fab fa-flickr fa-4x"></i><span>Flickr</span></a></li>`)
+      } else if (webAddress === "https://medium.com/@Tom_Steyer" || webAddress === "https://medium.com/@TulsiGabbard" || webAddress === "https://medium.com/@KamalaHarris") {
         $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
-          <i class="fab fa-medium fa-4x"></i></a></li>`)
+          <i class="fab fa-medium fa-4x"></i><span>Medium</span></a></li>`)
       } else {
         $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
-          <i class="fas fa-bullhorn fa-4x"></i>  </a></li>`)
+          <i class="fas fa-bullhorn fa-4x"></i><span>Website</span></a></li>`)
       }
     }
   };
@@ -128,6 +137,8 @@ function getNews(query, maxResults = 5) {
     });
 }
 
+//Display News API
+
 function displayNews(responseJson, maxResults) {
   // if there are previous results, remove them
   console.log(responseJson);
@@ -136,10 +147,10 @@ function displayNews(responseJson, maxResults) {
   for (let i = 0; i < responseJson.articles.length & i < maxResults; i++) {
     $('#results-News-list').append(
       `<li><h4><a href="${responseJson.articles[i].url}" target="_blank" >${responseJson.articles[i].title}</a></h4><br>
-      <p>${responseJson.articles[i].source.name} By ${responseJson.articles[i].author}</p><br>
+      
+      <p>${responseJson.articles[i].source.name} by ${responseJson.articles[i].author}, ${responseJson.articles[i].publishedAt}</p><br>
       <p><img src='${responseJson.articles[i].urlToImage}'>
       ${responseJson.articles[i].description}</p>
-      
       </li>`
     )
   };
@@ -176,6 +187,8 @@ function getYouTubeVideos(candidateName) {
     });
 }
 
+//Display YouTube
+
 function displayYouTubeVideos(responseJson) {
   // if there are previous results, remove them
   console.log(responseJson);
@@ -183,11 +196,14 @@ function displayYouTubeVideos(responseJson) {
   // iterate through the items array
   for (let i = 0; i < responseJson.items.length; i++) {
     const youTubeUrl = 'https://www.youtube.com/watch?v=' + responseJson.items[i].id.videoId;
+    let publishedAtUsTime = responseJson.items[i].snippet.publishedAt;
+    // console.log(publishedAtUsTime.toLocaleString());
+    // console.log(convertUTCDateToLocalDate(new Date(publishedAtUsTime)));
     console.log(youTubeUrl);
     $('#results-YouTube-list').append(
       `<li><h4><a href="${youTubeUrl}" target="_blank" ${responseJson.items[i].snippet.title}</a></h4><br>
        <p>${responseJson.items[i].snippet.description}</p><br>
-       <p>${responseJson.items[i].snippet.publishedAt}</p><br>
+       <p>${convertUTCDateToLocalDate(new Date(publishedAtUsTime))}</p><br>
       <img src='${responseJson.items[i].snippet.thumbnails.default.url}'>
       <hr>
       </li>`
@@ -197,9 +213,14 @@ function displayYouTubeVideos(responseJson) {
 
 
 
+
+//Watch click 
+
 function watchCandidate() {
+
   $('.Image').click(function (event) {
     event.preventDefault();
+
     // console.log('Image clicked: ' + $(this).attr('alt'));
     const candidateName = $(this).attr('alt')
     // get candidate object from STORE 
@@ -216,3 +237,13 @@ function watchCandidate() {
 
 $(watchCandidate);
 
+//Hover effect on image 
+
+$(document).ready(function () {
+  $(".Image").css("opacity", 1.0);
+  $(".Image").hover(function () {
+    $(this).animate({ opacity: 0.65 }, 500);
+  }, function () {
+    $(this).animate({ opacity: 1.0 }, 500);
+  });
+});
