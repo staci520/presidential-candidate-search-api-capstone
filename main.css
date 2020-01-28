@@ -79,7 +79,7 @@ h5 {
 }
 
 .nav-bar .nav-links a:hover {
-  color: #943939;
+  color: #808080;
 }
 
 .nav-bar .nav-links a:active {
@@ -129,7 +129,7 @@ a:visited {
 }
 
 a:hover {
-  color: #943939;
+  color: #808080;
 }
 
 a:active {
@@ -225,13 +225,14 @@ a:active {
 
 a span{
   color:black;
-  font-size:10px;
-  padding:5px 0 10px 0;
-  display:block;
-  text-transform:uppercase;
+  font-size: 10px;
+  padding: 5px 0 10px 0;
+  display: block;
+  text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
-  letter-spacing:1px;
+  letter-spacing: 1px;
 }
+
 
 
 #results-YouTube-list li {
@@ -239,6 +240,13 @@ a span{
   margin: 3px;
   padding: 3px;
   border: 1px solid lightgray;
+}
+
+#results-YouTube-list img {
+  width: 100%;
+  max-width: 150px;
+  float: left;
+  padding: 8px;
 }
 
 
@@ -249,7 +257,7 @@ a span{
 
 #results-News-list img {
   width: 100%;
-  max-width: 150px;
+  max-width: 160px;
   float: left;
   padding: 8px;
 }
@@ -261,6 +269,8 @@ a span{
   padding: 3px;
   border: 1px solid lightgray;
 }
+
+
 
 .error-message {
   color: red;

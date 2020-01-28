@@ -1,15 +1,7 @@
 'use strict';
 
-function convertUTCDateToLocalDate(date) {
-  var newDate = new Date(date.getTime() + date.getTimezoneOffset() * 60 * 1000);
 
-  var offset = date.getTimezoneOffset() / 60;
-  var hours = date.getHours();
 
-  newDate.setHours(hours - offset);
-
-  return newDate;
-}
 
 function formatQueryParams(params) {
   const queryItems = Object.keys(params)
@@ -85,7 +77,7 @@ function displayVoteSmart(responseJson) {
           <i class="fab fa-youtube-square fa-4x"></i><span>YouTube</span></a></li>`)
       } else if (webAddressType === "Website - LinkedIn") {
         $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
-          <i class="fab fa-linkedin fa-4x"></i></a><span>LinkedIn</span></li>`)
+          <i class="fab fa-linkedin fa-4x"></i><span>LinkedIn</span></a></li>`)
       } else if (webAddress === "https://www.snapchat.com/add/bernie.sanders") {
         $('#results-VoteSmart-list').append(`<li><a href="${webAddress}" target="_blank"> 
               <i class="fab fa-snapchat-square fa-4x"></i><span>SnapChat</span></a></li>`)
@@ -145,22 +137,23 @@ function displayNews(responseJson, maxResults) {
   $('#results-News-list').empty();
   // iterate through the articles array, stopping at the max number of results
   for (let i = 0; i < responseJson.articles.length & i < maxResults; i++) {
+    let publishedAt = responseJson.articles[i].publishedAt.substring(0, 10);
     $('#results-News-list').append(
       `<li><h4><a href="${responseJson.articles[i].url}" target="_blank" >${responseJson.articles[i].title}</a></h4><br>
-      
-      <p>${responseJson.articles[i].source.name} by ${responseJson.articles[i].author}, ${responseJson.articles[i].publishedAt}</p><br>
+      <p>${responseJson.articles[i].source.name} by ${responseJson.articles[i].author}, ${publishedAt}</p><br>
       <p><img src='${responseJson.articles[i].urlToImage}'>
       ${responseJson.articles[i].description}</p>
       </li>`
     )
   };
-
 };
 
 // YOUTUBE
 
 function getYouTubeVideos(candidateName) {
-  const apiKeyYouTube = 'AIzaSyA_nz1y-bmMAb3SuqMa4HtEyUYY7r5BlI4';
+
+  // const apiKeyYouTube = 'AIzaSyAIB_3mci8kbpTsvczAENat_5w-HwYgF00';
+  const apiKeyYouTube = 'AIzaSyC_fKuRbLMnhEz_FY_r-QTLigEep7IN-gg';
   const searchUrlYouTube = 'https://www.googleapis.com/youtube/v3/search';
   const params = {
     key: apiKeyYouTube,
@@ -196,22 +189,18 @@ function displayYouTubeVideos(responseJson) {
   // iterate through the items array
   for (let i = 0; i < responseJson.items.length; i++) {
     const youTubeUrl = 'https://www.youtube.com/watch?v=' + responseJson.items[i].id.videoId;
-    let publishedAtUsTime = responseJson.items[i].snippet.publishedAt;
-    // console.log(publishedAtUsTime.toLocaleString());
-    // console.log(convertUTCDateToLocalDate(new Date(publishedAtUsTime)));
+    let publishedAt = responseJson.items[i].snippet.publishedAt.substring(0, 10);
+    console.log(publishedAt);
     console.log(youTubeUrl);
     $('#results-YouTube-list').append(
-      `<li><h4><a href="${youTubeUrl}" target="_blank" ${responseJson.items[i].snippet.title}</a></h4><br>
-       <p>${responseJson.items[i].snippet.description}</p><br>
-       <p>${convertUTCDateToLocalDate(new Date(publishedAtUsTime))}</p><br>
-      <img src='${responseJson.items[i].snippet.thumbnails.default.url}'>
-      <hr>
+      `<li><h4><a href="${youTubeUrl}" target="_blank"> ${responseJson.items[i].snippet.title}</a></h4><br>
+      <p>${publishedAt}</p>
+      <p><img src='${responseJson.items[i].snippet.thumbnails.default.url}'>
+      ${responseJson.items[i].snippet.description}</p>
       </li>`
     )
   };
 };
-
-
 
 
 //Watch click 

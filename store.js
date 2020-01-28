@@ -119,7 +119,7 @@ const STORE = [
         candidateId: '69496',
     },
     {
-        candidateName: 'Erick Swalwell',
+        candidateName: 'Eric Swalwell',
         candidateId: '129529',
     },
     {
