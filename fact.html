@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Explore and examine the words shared about the 2020 U.S. Presidential Election">
     <meta name="keywords" content="2020 Election, Voter Registration, ">
-    <link rel="stylesheet" href="voter.css">
+    <link rel="stylesheet" href="fact.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather%7CRosarivo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <title>2020 U.S. Presidential Election In So Many Words Voter Information Page</title>
@@ -26,38 +26,42 @@
             <li>
                 <a href="former.html">Former Candidates</a>
             </li>
+
             <li>
                 <a href="https://www.realclearpolitics.com/epolls/latest_polls/presidential_primary_polls/"
-                    target="_blank">Real Clear
-                    Politics Polls</a>
+                    target="_blank">Real Clear Politics Polls</a>
             </li>
             <li>
-                <a href="fact.html">PolitiFact Truth Meter</a>
+                <a href="voter.html" target="_blank">Verify Voter Registration</a>
             </li>
         </ul>
     </header>
 
     <main>
-        <section class="voter-container">
 
-            <iframe src="https://am-i-registered-to-vote.org/" scrolling="no" frameborder="0" width="100%" height="1000"
-                style="border: none; height: 1000px;"></iframe>
+        <section>
+
+            <div id="politifact-5" class="widget"></div>
+
+            <script src="https://static.politifact.com/js/widget/politifactwidget5.js"></script>
 
         </section>
+
     </main>
 
-    <!-- FOOTER SECTION -->
+<!-- FOOTER SECTION -->
 
-    <footer class="footer-container">
-        <h6>&copy; 2020 Staci Stark</h6>
-        <h6>Content powered by Rock The Vote</h6>
-    </footer>
+<footer class="footer-container">
+    <h6>&copy; 2020 Staci Stark</h6>
+    <h6>Content powered by Politifact</h6>
+</footer>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="store.js"></script>
-    <script src="index.js"></script>
-    <script src="https://kit.fontawesome.com/343fa11119.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="store.js"></script>
+<script src="index.js"></script>
+<script src="https://kit.fontawesome.com/343fa11119.js" crossorigin="anonymous"></script>
 </body>
+
 
 </html>

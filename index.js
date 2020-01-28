@@ -100,15 +100,18 @@ function displayVoteSmart(responseJson) {
 
 function getNews(query, maxResults = 5) {
   const apiKey = "5d34f3b1e65347169f2b4a651b8fd8ea"
-  const searchURL = 'https://newsapi.org/v2/everything';
+  const searchURL1 = 'https://newsapi.org/v2/top-headlines';
+  const searchURL2 = 'https://newsapi.org/v2/everything'
   const params = {
     q: query,
     language: "en",
   };
   const queryString = formatQueryParams(params)
-  const url = searchURL + '?' + queryString;
+  const url1 = searchURL1 + '?' + queryString;
+  const url2 = searchURL2 + '?' + queryString;
 
-  console.log(url);
+  $('#results-News-list').empty()
+  console.log(url1, url2);
 
   const options = {
     headers: new Headers({
@@ -116,7 +119,20 @@ function getNews(query, maxResults = 5) {
     })
   };
 
-  fetch(url, options)
+  //fetch top headlines
+  fetch(url1, options)
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      }
+      throw new Error(response.statusText);
+    })
+    .then(responseJson => displayNews(responseJson, maxResults))
+    .catch(err => {
+      $('#js-error-message').text(`Something went wrong: ${err.message}`);
+    });
+  //fetch everything
+  fetch(url2, options)
     .then(response => {
       if (response.ok) {
         return response.json();
@@ -134,7 +150,7 @@ function getNews(query, maxResults = 5) {
 function displayNews(responseJson, maxResults) {
   // if there are previous results, remove them
   console.log(responseJson);
-  $('#results-News-list').empty();
+  // $('#results-News-list').empty();
   // iterate through the articles array, stopping at the max number of results
   for (let i = 0; i < responseJson.articles.length & i < maxResults; i++) {
     let publishedAt = responseJson.articles[i].publishedAt.substring(0, 10);
@@ -159,7 +175,7 @@ function getYouTubeVideos(candidateName) {
     key: apiKeyYouTube,
     q: candidateName,
     part: 'snippet',
-    maxResults: '2',
+    maxResults: '5',
     type: 'video'
   };
   const queryString = formatQueryParams(params)
