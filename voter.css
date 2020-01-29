@@ -30,7 +30,7 @@
 
 h1 {
     font-family: 'Merriweather', serif;
-    font-size: 40px;
+    font-size: 20px;
     margin: 25px;
     text-align: center;
     color: #ECF0F1;
@@ -84,7 +84,7 @@ h1 {
   }
   
   .nav-bar .nav-links a:hover {
-    color: #808080;
+    color: darkorchid;
   }
   
   .nav-bar .nav-links a:active {
@@ -155,4 +155,54 @@ h1 {
   text-align: center;
   margin: 20px;
   color: whitesmoke;
+}
+
+/* MEDIA QUERIES  */
+
+/*iPhone portrait--------------------*/
+
+@media only screen and (min-width: 320px) {
+  
+}
+
+
+
+/*iPhone landscape-----------------*/
+
+@media only screen and (min-width: 480px) {
+ 
+  h1 {
+    font-size: 24px;
+  }
+  
+}
+
+/*ipad potrait--------------------*/
+
+@media only screen and (min-width: 768px) {
+ 
+
+     h1 {
+      font-size: 30px;
+    }
+    
+    
+}
+
+/*ipad lanscape / small laptop----------*/
+
+@media only screen and (min-width: 1024px) {
+  
+
+  h1 {
+    font-size: 40px;
+  }
+  
+
+}
+
+/* large desktop-------------------- */
+
+@media only screen and (min-width: 1600px) {
+  
 }

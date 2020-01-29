@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Explore and examine the words shared about the 2020 U.S. Presidential Election">
     <meta name="keywords"
-        content="2020 Election, Presidential, candidates, VoteSmart, Facebook, Twitter, News, YouTube, ">
+        content="2020 Election, Presidential, former candidates, VoteSmart, Facebook, Twitter, News, YouTube, ">
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather%7CRosarivo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <title>2020 U.S. Presidential Election In So Many Words Landing Page</title>
+    <title>2020 U.S. Presidential Election In So Many Words Former Candidates</title>
 </head>
 
 <!-- HEADER SECTION -->
@@ -29,7 +29,8 @@
                 <a href="main.html">Current Candidates</a>
             </li>
             <li>
-                <a href="https://www.realclearpolitics.com/epolls/latest_polls/presidential_primary_polls/" target="_blank">Real Clear
+                <a href="https://www.realclearpolitics.com/epolls/latest_polls/presidential_primary_polls/"
+                    target="_blank">Real Clear
                     Politics Polls</a>
             </li>
             <li>
@@ -131,35 +132,39 @@
             </div>
         </section>
 
-        <section class="results-container">
-            <div class="first">
-                <div class="first-a">
-                    <h3><i class="fas fa-handshake"></i> CONNECT</h3>
-                    <h4 id="candidateName"></h4>
-                    <p id="js-votesmart-error-message" class="error-message"></p>
-                    <section id="resultsVoteSmart" class="hidden">
-                        <ul id="results-VoteSmart-list">
+        <section>
+            <div class="results-container">
+                <!-- <div class="first"> -->
+                <div class="call-out1">
+                    <div class="call-out1a">
+                        <h3><i class="fas fa-handshake"></i> CONNECT</h3>
+                        <h4 id="candidateName"></h4>
+                        <p id="js-votesmart-error-message" class="error-message"></p>
+                        <section id="resultsVoteSmart" class="hidden">
+                            <ul id="results-VoteSmart-list">
+                            </ul>
+                        </section>
+                    </div>
+
+                    <div class="call-out1b">
+                        <h3><i class="fab fa-youtube-square"></i> WATCH</h3>
+                        <p id="js-youtube-error-message" class="error-message"></p>
+                        <section id="resultsYouTube" class="hidden">
+                            <ul id="results-YouTube-list">
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+                <!-- </div> -->
+
+                <div class="call-out2">
+                    <h3><i class="far fa-newspaper"></i> READ</h3>
+                    <p id="js-news-error-message" class="error-message"></p>
+                    <section id="resultsNews" class="hidden">
+                        <ul id="results-News-list">
                         </ul>
                     </section>
                 </div>
-
-                <div class="first-b">
-                    <h3><i class="fab fa-youtube-square"></i> WATCH</h3>
-                    <p id="js-youtube-error-message" class="error-message"></p>
-                    <section id="resultsYouTube" class="hidden">
-                        <ul id="results-YouTube-list">
-                        </ul>
-                    </section>
-                </div>
-            </div>
-
-            <div class="second">
-                <h3><i class="far fa-newspaper"></i> READ</h3>
-                <p id="js-news-error-message" class="error-message"></p>
-                <section id="resultsNews" class="hidden">
-                    <ul id="results-News-list">
-                    </ul>
-                </section>
             </div>
         </section>
 

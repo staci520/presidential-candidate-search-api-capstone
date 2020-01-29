@@ -24,9 +24,12 @@ body {
 
 h1 {
     font-family: 'Merriweather', serif;
-    font-size: 40px;
+    font-size: 22px;
     margin: 30px;
+}
 
+h2  {
+    font-size: 17px;
 }
 
 header {
@@ -78,9 +81,9 @@ header {
 }
 
 .about-container {
-    width: 50%;
+    /* width: 50%; */
     margin: 20px auto 0 auto;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     display: flex;
 }
@@ -109,3 +112,66 @@ ul {
     text-align: center;
     margin: 20px;
 }
+
+/*iPhone portrait--------------------*/
+
+@media only screen and (min-width: 320px) {}
+
+
+
+/*iPhone landscape-----------------*/
+
+@media only screen and (min-width: 480px) {
+
+  h1 {
+    font-size: 24px;
+  }
+
+
+  
+
+}
+
+/*ipad potrait--------------------*/
+
+@media only screen and (min-width: 768px) {
+
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 25px;
+
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  .about-container {
+    width: 50%;
+ }
+
+}
+
+/*ipad lanscape / small laptop----------*/
+
+@media only screen and (min-width: 1024px) {
+
+
+  h1 {
+    font-size: 40px;
+  }
+
+
+}
+
+/* large desktop-------------------- */
+
+@media only screen and (min-width: 1600px) {}

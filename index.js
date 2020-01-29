@@ -49,7 +49,7 @@ function displayVoteSmart(responseJson) {
 
   for (let obj in responseJson) {
     console.log(`VoteSmart Bio: ${responseJson[obj].generalInfo.linkBack}`)
-    $("#candidateName").replaceWith(`<b><h5 id="candidateName">${responseJson[obj].candidate.firstName} ${responseJson[obj].candidate.lastName}</h5></b>`)
+    $("#candidateName").replaceWith(`<b><h4 id="candidateName">${responseJson[obj].candidate.firstName} ${responseJson[obj].candidate.lastName}</h4></b>`)
     $('#results-VoteSmart-list').append(
       `<li><a href="${responseJson[obj].generalInfo.linkBack}" target="_blank"> <i class="fas fa-binoculars fa-4x"></i><span>VoteSmart</span></a></li>`)
 

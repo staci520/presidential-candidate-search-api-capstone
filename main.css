@@ -19,7 +19,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  /* font-size: 15px; */
+  font-size: 15px;
   background-color: #232222;
   ;
 }
@@ -27,7 +27,7 @@ body {
 
 h1 {
   font-family: 'Merriweather', serif;
-  font-size: 40px;
+  font-size: 22px;
   margin: 25px;
   text-align: center;
   color: #ECF0F1;
@@ -35,8 +35,8 @@ h1 {
 }
 
 h2 {
-  font-size: 25px;
-  margin: 20px;
+  font-size: 17px;
+  margin: 18px;
   text-align: center;
   color: #ECF0F1;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -44,7 +44,7 @@ h2 {
 
 h3 {
   font-family: 'Merriweather', serif;
-  font-size: 26px;
+  font-size: 17px;
   text-align: center;
   margin-bottom: 15px;
   border: 2px solid black;
@@ -53,19 +53,23 @@ h3 {
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 12px;
   text-decoration: underline;
   font-size: 1.2em;
 }
 
-h5 {
-  margin: auto;
+#candidateName {
+  font-size: 12px;
+  margin: auto 0;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
 }
 
 /* HEADER / NAV BAR */
 
 .nav-bar {
-    text-align: center;
+  text-align: center;
 }
 
 .nav-bar .nav-links a:link {
@@ -79,11 +83,7 @@ h5 {
 }
 
 .nav-bar .nav-links a:hover {
-  color: #808080;
-}
-
-.nav-bar .nav-links a:active {
-  color: #393C62;
+  color: darkorchid;
 }
 
 
@@ -97,12 +97,12 @@ h5 {
   margin-bottom: 10px;
 }
 
-  
+
 ul {
-    display: inline-block;
-    list-style-type: none;
-    text-decoration: none;
-  }
+  display: inline-block;
+  list-style-type: none;
+  text-decoration: none;
+}
 
 
 
@@ -112,29 +112,19 @@ li {
   width: auto;
 }
 
+
+a:visited {
+  color: orange;
+}
+
+a:hover {
+  color: darkorchid;
+}
+
 .Image {
   cursor: pointer;
 }
 
-
-
-a:link {
-  color: black;
-  font-weight: bold;
-  transition-duration: 0.3s;
-}
-
-a:visited {
-  color: black;
-}
-
-a:hover {
-  color: #808080;
-}
-
-a:active {
-  color: #393C62;
-}
 
 
 /* CANDIDATE CONTAINER-----------------------------------------------*/
@@ -150,10 +140,6 @@ a:active {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  border-right: 4px solid black;
-  border-top: 4px solid black;
-  border-left: 4px solid black;
-
 }
 
 .fixed-sizeR {
@@ -187,59 +173,65 @@ a:active {
 /* RESULTS---------------------------------------------------*/
 
 .results-container {
+  background-color: whitesmoke;
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
   min-height: 500px;
-  border: 2px solid black;
-
+  flex-direction: column;
 }
 
-.first {
+.call-out1 {
+  max-width: 1000px;
   background-color: whitesmoke;
-  flex: 1;
-
-}
-
-.first-a {
-  background-color: whitesmoke;
-  border: 2px solid black;
   padding: 20px;
   text-align: center;
 }
 
-.first-b {
-  background-color: whitesmoke;
-  border: 2px solid black;
-  padding: 20px;
-
-}
-
-.second {
-  background-color: whitesmoke;
-  padding: 20px;
+.call-out1a {
   flex: 1;
-  border: 2px solid black;
+
+  /* padding: 20px; */
+
 }
 
+.call-out1b {
+  flex: 1;
+  text-align: left;
+  /* padding: 20px; */
+}
 
-a span{
-  color:black;
+.call-out2 {
+  max-width: 1000px;
+  background-color: whitesmoke;
+  padding: 20px;
+  text-align: left;
+  flex: 1;
+
+}
+
+a span {
+  color: black;
   font-size: 10px;
   padding: 5px 0 10px 0;
   display: block;
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
   letter-spacing: 1px;
+
 }
 
 
+#results-VoteSmart-list {
+  border: 2px solid lightgray;
+  text-align: center;
+}
 
 #results-YouTube-list li {
   font-size: 1.0em;
   margin: 3px;
   padding: 3px;
-  border: 1px solid lightgray;
+  border: 2px solid lightgray;
 }
 
 #results-YouTube-list img {
@@ -267,10 +259,8 @@ a span{
   font-size: 1.0em;
   margin: 3px;
   padding: 3px;
-  border: 1px solid lightgray;
+  border: 2px solid lightgray;
 }
-
-
 
 .error-message {
   color: red;
@@ -300,3 +290,102 @@ a span{
 }
 
 /* MEDIA QUERIES---------------------------------------------------*/
+
+/*iPhone portrait--------------------*/
+
+@media only screen and (min-width: 320px) {}
+
+
+
+/*iPhone landscape-----------------*/
+
+@media only screen and (min-width: 480px) {
+
+  h1 {
+    font-size: 24px;
+  }
+
+}
+
+#candidateName {
+  font-size: 20px;
+}
+
+/*ipad potrait--------------------*/
+
+@media only screen and (min-width: 768px) {
+
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 25px;
+
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+
+  .results-container {
+    background-color: whitesmoke;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    min-height: 500px;
+    flex-direction: row;
+    padding: 20px;
+  }
+
+  .call-out1 {
+    max-width: 50%;
+    background-color: whitesmoke;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .call-out1a {
+    flex: 1;
+
+    /* padding: 20px; */
+
+  }
+
+  .call-out1b {
+    flex: 1;
+    text-align: left;
+
+  }
+
+  .call-out2 {
+    max-width: 50%;
+    background-color: whitesmoke;
+
+    text-align: left;
+    flex: 1;
+
+  }
+}
+
+/*ipad lanscape / small laptop----------*/
+
+@media only screen and (min-width: 1024px) {
+
+
+  h1 {
+    font-size: 40px;
+  }
+
+
+}
+
+/* large desktop-------------------- */
+
+@media only screen and (min-width: 1600px) {}
