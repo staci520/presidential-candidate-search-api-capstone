@@ -18,12 +18,13 @@
 
 <body>
 
-    <header class="nav-bar">
+    <header>
         <div class="title">
             <h1>2020 U.S PRESIDENTIAL ELECTION ... <i>in so many words</i></h1>
             <h2 class="tagline">Connect, watch and read about the <i>current</i> leading candidates with a few clicks
             </h2>
         </div>
+        <div class="nav">     
         <ul class="nav-links">
             <li>
                 <a href="former.html">Former Candidates</a>
@@ -40,6 +41,7 @@
                 <a href="voter.html" target="_blank">Verify Voter Registration</a>
             </li>
         </ul>
+    </div>
     </header>
 
     <main>
@@ -126,61 +128,69 @@
             <div class="fixed-sizeL">
                 <img class="Image" src="images/VerminSupreme.jpg" alt="Vermin Supreme" id="vSupreme">
                 <h5>Vermin<br>Supreme</h5>
+                <i>Green Party</i>
             </div>
 
             <div class="fixed-sizeL">
                 <img class="Image" src="images/DanBehrman.jpg" alt="Dan Behrman" id="DBehrman">
                 <h5>Dan<br>Behrman</h5>
+                <i>Green Party</i>
             </div>
 
             <div class="fixed-sizeG">
                 <img class="Image" src="images/HowieHawkins.jpg" alt="Howie Hawkins" id="hHawkins">
                 <h5>Howie<br>Hawkins</h5>
+                <i>Libertarian</i>
             </div>
 
             <div class="fixed-sizeG">
                 <img class="Image" src="images/DarioHunter.jpg" alt="Dario Hunter" id="dHunter">
                 <h5>Dario<br>Hunter</h5>
+                <i>Libertarian</i>
             </div>
 
         </section>
 
-        <section class="results-container">
-            <div class="first">
-                <div class="first-a">
-                    <h3><i class="fas fa-handshake"></i> CONNECT</h3>
-                    <h4 id="candidateName">Candidate Name</h4>
-                    <p id="js-votesmart-error-message" class="error-message"></p>
-                    <section id="resultsVoteSmart" class="hidden">
-                        <ul id="results-VoteSmart-list">
-                        </ul>
-                    </section>
+        <section>
+                <div class="results-container">
+                    <div class="call-out1">
+                        <div class="call-out1a">
+                            <h3><i class="fas fa-handshake"></i> CONNECT</h3>
+                            <h4 id="candidateName"></h4>
+                            <p id="js-votesmart-error-message" class="error-message"></p>
+                            <section id="resultsVoteSmart" class="hidden">
+                                <ul id="results-VoteSmart-list">
+                                </ul>
+                            </section>
+                        </div>
+    
+                        <div class="call-out1b">
+                            <h3><i class="fab fa-youtube-square"></i> WATCH</h3>
+                            <p id="js-youtube-error-message" class="error-message"></p>
+                            <section id="resultsYouTube" class="hidden">
+                                <ul id="results-YouTube-list">
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+    
+                    <div class="call-out2">
+                        <h3><i class="far fa-newspaper"></i> READ</h3>
+                        <p id="js-news-error-message" class="error-message"></p>
+                        <section id="resultsNews" class="hidden">
+                            <ul id="results-News-list">
+                            </ul>
+                        </section>
+                    </div>
                 </div>
+            </section>
 
-                <div class="first-b">
-                    <h3><i class="fab fa-youtube-square"></i> WATCH</h3>
-                    <p id="js-youtube-error-message" class="error-message"></p>
-                    <section id="resultsYouTube" class="hidden">
-                        <ul id="results-YouTube-list">
-                        </ul>
-                    </section>
-                </div>
-            </div>
-
-            <div class="second">
-                <h3><i class="far fa-newspaper"></i> READ</h3>
-                <p id="js-news-error-message" class="error-message"></p>
-                <section id="resultsNews" class="hidden">
-                    <ul id="results-News-list">
-                    </ul>
-                </section>
-            </div>
-        </section>
 
         <!-- RETURN LINK -->
 
         <section>
-            <div class="nav-bar">
+            <div class="nav">
 
                 <ul class="nav-links">
                     <li>
@@ -194,7 +204,8 @@
 
         <section class="connect-container">
             <h2>Connect with me </h2>
-            <ul class="connect-icons">
+            <div class="nav">
+            <ul class="nav-links">
                 <li>
                     <a href="mailto:staci520@yahoo.com" target="_blank">
                         <i class="fas fa-envelope-square fa-2x" style="color:whitesmoke"></i>
@@ -213,6 +224,7 @@
                     </a>
                 </li>
             </ul>
+        </div>
         </section>
     </main>
 

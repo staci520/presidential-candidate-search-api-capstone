@@ -68,23 +68,18 @@ h4 {
 
 /* HEADER / NAV BAR */
 
-.nav-bar {
+.nav {
   text-align: center;
 }
 
-.nav-bar .nav-links a:link {
+.nav .nav-links a:link {
   color: whitesmoke;
   font-weight: bold;
   transition-duration: 0.3s;
+  text-align: center;
 }
 
-.nav-bar .nav-links a:visited {
-  color: whitesmoke;
-}
 
-.nav-bar .nav-links a:hover {
-  color: darkorchid;
-}
 
 
 .title {
@@ -190,15 +185,12 @@ a:hover {
 
 .call-out1a {
   flex: 1;
-
-  /* padding: 20px; */
-
 }
 
 .call-out1b {
   flex: 1;
   text-align: left;
-  /* padding: 20px; */
+  margin-top: 20px;
 }
 
 .call-out2 {
@@ -207,7 +199,6 @@ a:hover {
   padding: 20px;
   text-align: left;
   flex: 1;
-
 }
 
 a span {
@@ -275,9 +266,7 @@ a span {
   margin: 20px;
 }
 
-.connect-icons {
-  color: whitesmoke;
-}
+
 
 
 /* FOOTER----------------------------------------------------------*/
@@ -345,7 +334,8 @@ a span {
   }
 
   .call-out1 {
-    max-width: 50%;
+    /* max-width: 50%; */
+    width: 50%;
     background-color: whitesmoke;
     padding: 20px;
     text-align: center;
@@ -365,7 +355,8 @@ a span {
   }
 
   .call-out2 {
-    max-width: 50%;
+    /* max-width: 50%; */
+    width: 50%;
     background-color: whitesmoke;
 
     text-align: left;

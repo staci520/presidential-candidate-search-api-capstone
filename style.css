@@ -28,7 +28,7 @@ h1 {
     margin: 30px;
 }
 
-h2  {
+h2 {
     font-size: 17px;
 }
 
@@ -76,9 +76,9 @@ header {
 }
 
 #button:hover {
-    background-color:  #808080;;
-    ;
+    background-color: darkorchid;
 }
+
 
 .about-container {
     /* width: 50%; */
@@ -123,12 +123,12 @@ ul {
 
 @media only screen and (min-width: 480px) {
 
-  h1 {
-    font-size: 24px;
-  }
+    h1 {
+        font-size: 24px;
+    }
 
 
-  
+
 
 }
 
@@ -137,26 +137,26 @@ ul {
 @media only screen and (min-width: 768px) {
 
 
-  h1 {
-    font-size: 30px;
-  }
+    h1 {
+        font-size: 30px;
+    }
 
-  h2 {
-    font-size: 25px;
+    h2 {
+        font-size: 25px;
 
-  }
+    }
 
-  h3 {
-    font-size: 26px;
-  }
+    h3 {
+        font-size: 26px;
+    }
 
-  h4 {
-    font-size: 18px;
-  }
+    h4 {
+        font-size: 18px;
+    }
 
-  .about-container {
-    width: 50%;
- }
+    .about-container {
+        width: 50%;
+    }
 
 }
 
@@ -165,9 +165,9 @@ ul {
 @media only screen and (min-width: 1024px) {
 
 
-  h1 {
-    font-size: 40px;
-  }
+    h1 {
+        font-size: 40px;
+    }
 
 
 }
