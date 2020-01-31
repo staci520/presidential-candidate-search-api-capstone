@@ -146,9 +146,5 @@ const STORE = [
         candidateName: 'Dan Behrman',
         candidateId: '186431',
     },
-
-
-
 ]
-
 

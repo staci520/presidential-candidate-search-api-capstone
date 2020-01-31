@@ -7,39 +7,48 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Explore and examine the words shared about the 2020 U.S. Presidential Election">
     <meta name="keywords" content="2020 Election, Politifact, ">
-    <link rel="stylesheet" href="fact.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather%7CRosarivo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/343fa11119.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
     <title>2020 U.S. Presidential Election In So Many Words Politifact Widget Page</title>
 </head>
 
 <body>
 
-    <header class="nav-bar">
+    <header>
         <div class="title">
-            <h1>2020 U.S PRESIDENTIAL ELECTION ... <i>in so many words</i></h1>
+            <h1>2020 U.S Presidential Election ... <i>in so many words</i></h1>
         </div>
-        <ul class="nav-links">
-            <li>
-                <a href="main.html">Current Candidates</a>
-            </li>
-            <li>
-                <a href="former.html">Former Candidates</a>
-            </li>
-
-            <li>
-                <a href="https://www.realclearpolitics.com/epolls/latest_polls/presidential_primary_polls/"
-                    target="_blank">Real Clear Politics Polls</a>
-            </li>
-            <li>
-                <a href="voter.html" target="_blank">Verify Voter Registration</a>
-            </li>
-        </ul>
+        <div class="nav">
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="main.html">Current Candidates</a>
+                </li>
+                <li>
+                    <a href="former.html">Former Candidates</a>
+                </li>
+                <li>
+                    <a href="https://www.realclearpolitics.com/epolls/latest_polls/presidential_primary_polls/"
+                        target="_blank"> Real Clear
+                        Politics Polls</a>
+                </li>
+                <li>
+                    <a class="active" href="fact.html">PolitiFact Truth Meter</a>
+                </li>
+                <li>
+                    <a href="voter.html" target="_blank">Verify Voter Registration</a>
+                </li>
+            </ul>
+        </div>
     </header>
 
     <main>
 
-        <section>
+        <section class="fact">
 
             <div id="politifact-5" class="widget"></div>
 
@@ -62,25 +71,25 @@
 
             -->
 
-<!--        -->
+            <!--        -->
 
         </section>
 
     </main>
 
-<!-- FOOTER SECTION -->
+    <!-- FOOTER SECTION -->
 
-<footer class="footer-container">
-    <h6>&copy; 2020 Staci Stark</h6>
-    <h6>Content powered by Politifact</h6>
-</footer>
+    <footer class="footer-container">
+        <h6>&copy; 2020 Staci Stark</h6>
+        <h6>Content powered by Politifact</h6>
+    </footer>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="store.js"></script>
-<script src="index.js"></script>
-<script src="https://kit.fontawesome.com/343fa11119.js" crossorigin="anonymous"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="store.js"></script>
+    <script src="index.js"></script>
 </body>
-
 
 </html>

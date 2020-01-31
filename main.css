@@ -19,11 +19,42 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 15px;
   background-color: #232222;
-  ;
 }
 
+ul {
+  display: inline-block;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+  margin: 10px;
+  width: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #35495e;
+}
+
+a.active {
+  font-weight: bold;
+}
+
+a.active::before {
+  content: ">>  ";
+  color: whitesmoke;
+}
+
+a:visited {
+  color: #698474;
+}
+
+a:hover {
+  color: #AD62AA;
+}
 
 h1 {
   font-family: 'Merriweather', serif;
@@ -54,16 +85,7 @@ h3 {
 
 h4 {
   font-size: 12px;
-  text-decoration: underline;
   font-size: 1.2em;
-}
-
-#candidateName {
-  font-size: 12px;
-  margin: auto 0;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
 }
 
 /* HEADER / NAV BAR */
@@ -79,9 +101,6 @@ h4 {
   text-align: center;
 }
 
-
-
-
 .title {
   font: 75px;
   float: none;
@@ -92,40 +111,19 @@ h4 {
   margin-bottom: 10px;
 }
 
-
-ul {
-  display: inline-block;
-  list-style-type: none;
-  text-decoration: none;
-}
-
-
-
-li {
-  display: inline-block;
-  margin: 10px;
-  width: auto;
-}
-
-
-a:visited {
-  color: orange;
-}
-
-a:hover {
-  color: darkorchid;
-}
-
 .Image {
   cursor: pointer;
 }
 
+/* CANDIDATE PAGES-----------------------------------------------*/
 
-
-/* CANDIDATE CONTAINER-----------------------------------------------*/
-
-
-
+#candidateName {
+  font-size: 12px;
+  margin: auto 0;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
 
 .candidates-container {
   max-width: 1000px;
@@ -212,7 +210,6 @@ a span {
 
 }
 
-
 #results-VoteSmart-list {
   border: 2px solid lightgray;
   text-align: center;
@@ -231,12 +228,11 @@ a span {
   float: left;
   padding: 8px;
 }
-
-
+/* 
 #results-News {
   align-content: center;
   padding: 10px;
-}
+} */
 
 #results-News-list img {
   width: 100%;
@@ -244,7 +240,6 @@ a span {
   float: left;
   padding: 8px;
 }
-
 
 #results-News-list li {
   font-size: 1.0em;
@@ -257,6 +252,27 @@ a span {
   color: red;
 }
 
+/* VOTER REGISTRATION CONTAINER  */
+
+.voter-container {
+  max-width: 1000px;
+  background-color: #232222;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 25px;
+}
+
+/* POLITIFACT PAGE */
+
+section.fact {
+  max-width: 460px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
 
 /* CONNECT-------------------------------------------------------- */
 
@@ -265,9 +281,6 @@ a span {
   text-align: center;
   margin: 20px;
 }
-
-
-
 
 /* FOOTER----------------------------------------------------------*/
 
@@ -284,16 +297,12 @@ a span {
 
 @media only screen and (min-width: 320px) {}
 
-
-
 /*iPhone landscape-----------------*/
 
 @media only screen and (min-width: 480px) {
-
   h1 {
     font-size: 24px;
   }
-
 }
 
 #candidateName {
@@ -303,15 +312,12 @@ a span {
 /*ipad potrait--------------------*/
 
 @media only screen and (min-width: 768px) {
-
-
   h1 {
     font-size: 30px;
   }
 
   h2 {
     font-size: 25px;
-
   }
 
   h3 {
@@ -321,7 +327,6 @@ a span {
   h4 {
     font-size: 18px;
   }
-
 
   .results-container {
     background-color: whitesmoke;
@@ -334,7 +339,6 @@ a span {
   }
 
   .call-out1 {
-    /* max-width: 50%; */
     width: 50%;
     background-color: whitesmoke;
     padding: 20px;
@@ -343,38 +347,27 @@ a span {
 
   .call-out1a {
     flex: 1;
-
-    /* padding: 20px; */
-
   }
 
   .call-out1b {
     flex: 1;
     text-align: left;
-
   }
 
   .call-out2 {
-    /* max-width: 50%; */
     width: 50%;
     background-color: whitesmoke;
-
     text-align: left;
     flex: 1;
-
   }
 }
 
 /*ipad lanscape / small laptop----------*/
 
 @media only screen and (min-width: 1024px) {
-
-
   h1 {
     font-size: 40px;
   }
-
-
 }
 
 /* large desktop-------------------- */

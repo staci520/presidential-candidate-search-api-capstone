@@ -76,7 +76,7 @@ header {
 }
 
 #button:hover {
-    background-color: darkorchid;
+    background-color: #AD62AA;
 }
 
 
@@ -95,17 +95,17 @@ ul {
 }
 
 
-.call-out-container {
+.inside-container {
     margin: 0 auto;
 }
 
-.call-out {
+/* .call-out {
     padding: 20px;
     box-sizing: border-box;
     margin-bottom: 20px;
     display: flex;
     flex-basis: 30%;
-}
+} */
 
 .footer-container {
     margin: auto;

@@ -8,9 +8,9 @@
     <meta name="description" content="Explore and examine the words shared about the 2020 U.S. Presidential Election">
     <meta name="keywords"
         content="2020 Election, Presidential, former candidates, VoteSmart, Facebook, Twitter, News, YouTube, ">
-    <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather%7CRosarivo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
     <title>2020 U.S. Presidential Election In So Many Words Former Candidates</title>
 </head>
 
@@ -20,18 +20,24 @@
 
     <header>
         <div class="title">
-            <h1>2020 U.S PRESIDENTIAL ELECTION ... <i>in so many words</i></h1>
+            <h1>2020 U.S Presidential Election ... <i>in so many words</i></h1>
             <h2 class="tagline">Connect, watch and read about the <i>former</i> leading candidates with a few clicks
             </h2>
         </div>
         <div class="nav">
             <ul class="nav-links">
                 <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
                     <a href="main.html">Current Candidates</a>
                 </li>
                 <li>
+                    <a class="active" href="former.html">Former Candidates</a>
+                </li>
+                <li>
                     <a href="https://www.realclearpolitics.com/epolls/latest_polls/presidential_primary_polls/"
-                        target="_blank">Real Clear
+                        target="_blank"> Real Clear
                         Politics Polls</a>
                 </li>
                 <li>
@@ -135,10 +141,10 @@
         </section>
 
         <section>
-            <div class="results-container"> 
+            <div class="results-container">
                 <div class="call-out1">
                     <div class="call-out1a">
-                        <h3><i class="fas fa-handshake"></i> CONNECT</h3>
+                        <h3><i class="fas fa-handshake"></i> Connect</h3>
                         <h4 id="candidateName"></h4>
                         <p id="js-votesmart-error-message" class="error-message"></p>
                         <section id="resultsVoteSmart" class="hidden">
@@ -148,7 +154,7 @@
                     </div>
 
                     <div class="call-out1b">
-                        <h3><i class="fab fa-youtube-square"></i> WATCH</h3>
+                        <h3><i class="fab fa-youtube-square"></i> Watch</h3>
                         <p id="js-youtube-error-message" class="error-message"></p>
                         <section id="resultsYouTube" class="hidden">
                             <ul id="results-YouTube-list">
@@ -159,7 +165,7 @@
                 <!-- </div> -->
 
                 <div class="call-out2">
-                    <h3><i class="far fa-newspaper"></i> READ</h3>
+                    <h3><i class="far fa-newspaper"></i> Read</h3>
                     <p id="js-news-error-message" class="error-message"></p>
                     <section id="resultsNews" class="hidden">
                         <ul id="results-News-list">

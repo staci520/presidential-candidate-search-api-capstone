@@ -115,14 +115,14 @@ function displayVoteSmart(responseJson, candidateName) {
 
 // NEWS API
 
-function getNews(query, maxResults = 5) {
+function getNews(query, maxResults = 2) {
   const apiKey = "5d34f3b1e65347169f2b4a651b8fd8ea"
   const searchURL1 = 'https://newsapi.org/v2/top-headlines';
   const searchURL2 = 'https://newsapi.org/v2/everything'
   const params = {
     q: query,
     language: "en",
-  };
+  }; 
   const queryString = formatQueryParams(params)
   const url1 = searchURL1 + '?' + queryString;
   const url2 = searchURL2 + '?' + queryString;
@@ -191,7 +191,7 @@ function getYouTubeVideos(candidateName) {
     key: apiKeyYouTube,
     q: candidateName,
     part: 'snippet',
-    maxResults: '2',
+    maxResults: '3',
     type: 'video'
   };
   const queryString = formatQueryParams(params)
