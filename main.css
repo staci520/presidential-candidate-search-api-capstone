@@ -49,11 +49,12 @@ a.active::before {
 }
 
 a:visited {
-  color: #698474;
+  color: #DF8543;
 }
 
 a:hover {
   color: #AD62AA;
+  text-decoration: underline;
 }
 
 h1 {
@@ -289,6 +290,7 @@ section.fact {
   text-align: center;
   margin: 20px;
   color: whitesmoke;
+  font-size: small;
 }
 
 /* MEDIA QUERIES---------------------------------------------------*/
