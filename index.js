@@ -193,7 +193,7 @@ function getYouTubeVideos(candidateName) {
     key: apiKeyYouTube,
     q: candidateName,
     part: 'snippet',
-    maxResults: '3',
+    maxResults: '5',
     type: 'video'
   };
   const queryString = formatQueryParams(params)
