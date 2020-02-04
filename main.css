@@ -48,13 +48,14 @@ a.active::before {
   color: whitesmoke;
 }
 
-a:visited {
-  color: #DF8543;
+a.hover :focus {
+  color: #AD62AA;
+  font-size: 105%;
+  border-bottom: 1px solid;
 }
 
-a:hover {
-  color: #AD62AA;
-  text-decoration: underline;
+a:visited {
+  color: #DF8543;
 }
 
 h1 {
@@ -127,7 +128,7 @@ h4 {
 }
 
 .candidates-container {
-  max-width: 1000px;
+  max-width: 1050px;
   margin: 0 auto;
   background-color: #BDC3C7;
   display: flex;
@@ -139,21 +140,21 @@ h4 {
 .fixed-sizeR {
   text-align: center;
   margin: 35px;
-  border: solid darkred 7px;
+  border: solid darkred 8px;
   background-color: whitesmoke;
 }
 
 .fixed-sizeD {
   text-align: center;
   margin: 35px;
-  border: solid darkblue 7px;
+  border: solid darkblue 8px;
   background-color: whitesmoke;
 }
 
 .fixed-sizeL {
   text-align: center;
   margin: 35px;
-  border: solid darkgreen 7px;
+  border: solid darkgreen 8px;
   background-color: whitesmoke;
 }
 
@@ -176,7 +177,7 @@ h4 {
 }
 
 .call-out1 {
-  max-width: 1000px;
+  max-width: 1050px;
   background-color: whitesmoke;
   padding: 20px;
   text-align: center;
@@ -193,7 +194,7 @@ h4 {
 }
 
 .call-out2 {
-  max-width: 1000px;
+  max-width: 1050px;
   background-color: whitesmoke;
   padding: 20px;
   text-align: left;
@@ -229,6 +230,7 @@ a span {
   float: left;
   padding: 8px;
 }
+
 /* 
 #results-News {
   align-content: center;
@@ -332,7 +334,7 @@ section.fact {
 
   .results-container {
     background-color: whitesmoke;
-    max-width: 1000px;
+    max-width: 1050px;
     margin: 0 auto;
     display: flex;
     min-height: 500px;
