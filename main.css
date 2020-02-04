@@ -48,14 +48,14 @@ a.active::before {
   color: whitesmoke;
 }
 
-a.hover :focus {
+a:visited {
+  color: #DF8543;
+}
+
+a:hover  {
   color: #AD62AA;
   font-size: 105%;
   border-bottom: 1px solid;
-}
-
-a:visited {
-  color: #DF8543;
 }
 
 h1 {
@@ -230,12 +230,6 @@ a span {
   float: left;
   padding: 8px;
 }
-
-/* 
-#results-News {
-  align-content: center;
-  padding: 10px;
-} */
 
 #results-News-list img {
   width: 100%;
