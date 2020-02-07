@@ -154,14 +154,14 @@ h4 {
 .fixed-sizeL {
   text-align: center;
   margin: 35px;
-  border: solid darkgreen 8px;
+  border: solid goldenrod  8px;
   background-color: whitesmoke;
 }
 
 .fixed-sizeG {
   text-align: center;
   margin: 35px;
-  border: solid goldenrod 7px;
+  border: solid darkgreen  8px;
   background-color: whitesmoke;
 }
 
