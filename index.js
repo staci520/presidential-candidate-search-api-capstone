@@ -187,7 +187,7 @@ function displayNews(responseJson, maxResults) {
 
 function getYouTubeVideos(candidateName) {
 
-  const apiKeyYouTube = 'AIzaSyAIB_3mci8kbpTsvczAENat_5w-HwYgF00';
+  const apiKeyYouTube = 'AIzaSyCO_EH4BcSR9BjjY0PtwiVWIfTLLw6-U5I';
   const searchUrlYouTube = 'https://www.googleapis.com/youtube/v3/search';
   const params = {
     key: apiKeyYouTube,
